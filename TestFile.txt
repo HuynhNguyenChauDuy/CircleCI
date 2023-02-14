@@ -1,0 +1,3 @@
+sfdx auth:jwt:grant --clientid 3MVG97quAmFZJfVyrGIgm4n0Sb3M5JvLWBrMc0orflNWCZEiu84h25AGscEv6o1caSpE9K6ptvK5sZrwM3BnB \
+--jwtkeyfile /Users/Duy Huynh/JWT/server.key --username duy.huynh@isobar.com \
+--instanceurl https://login.salesforce.com
