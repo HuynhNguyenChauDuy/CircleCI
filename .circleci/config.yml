@@ -23,3 +23,7 @@ jobs:
           name: Deploy
           command: sfdx force:source:deploy -p force-app/main/default/classes RunLocalTests
 workflows:
+    build-and-deploy:
+        jobs:
+            - build
+            - test
