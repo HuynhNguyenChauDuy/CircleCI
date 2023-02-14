@@ -7,13 +7,6 @@ jobs:
   # - Install
   # - Authenticate
   # - Deploy
-  workflows:
-    deploy-DuyHuynhDevOrg-workflow:
-     jobs:
-      - deploy-DuyHuynhDevOrg-job:
-          filters:
-            branches:
-              only: main
   deploy-DuyHuynhDevOrg-job:
     executor: sfdx/default
     steps:
