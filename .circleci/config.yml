@@ -21,4 +21,5 @@ jobs:
           command: sfdx force:auth:list
       - run:
           name: Deploy
-          command: sfdx force:source:deploy -p force-app/main/default/classes
+          command: sfdx force:source:deploy -p force-app/main/default/classes RunLocalTests
+workflows:
