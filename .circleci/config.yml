@@ -7,7 +7,14 @@ jobs:
   # - Install
   # - Authenticate
   # - Deploy
-  deploy-aegdevel-job:
+  workflows:
+    deploy-DuyHuynhDevOrg-workflow:
+     jobs:
+      - deploy-DuyHuynhDevOrg-job:
+          filters:
+            branches:
+              only: main
+  deploy-DuyHuynhDevOrg-job:
     executor: sfdx/default
     steps:
       - checkout
