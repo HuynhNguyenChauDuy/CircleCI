@@ -1,6 +1,8 @@
 orbs:
   sfdx: circleci/salesforce-sfdx@2.2.0
 jobs:
+  build:
+    Windows
   # aegdevel
   # - Install
   # - Authenticate
@@ -22,8 +24,3 @@ jobs:
       - run:
           name: Deploy
           command: sfdx force:source:deploy -p force-app/main/default/classes RunLocalTests
-workflows:
-    build-and-deploy:
-        jobs:
-            - build
-            - test
