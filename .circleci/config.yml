@@ -25,7 +25,10 @@ jobs:
           name: Deploy
           command: sfdx force:source:deploy -p force-app/main/default/classes RunLocalTests
 workflows:
-   test-deploy:
-    jobs:
-        -test
-        
+    version: 2
+    deploy-DuyHuynhDevOrg-workflow:
+     jobs:
+      - deploy-DuyHuynhDevOrg-job:
+          filters:
+            branches:
+              only: main
