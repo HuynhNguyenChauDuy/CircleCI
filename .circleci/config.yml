@@ -1,3 +1,4 @@
+version: 0.1.0
 orbs:
   sfdx: circleci/salesforce-sfdx@2.2.0
   
@@ -23,3 +24,10 @@ jobs:
       - run:
           name: Deploy
           command: sfdx force:source:deploy -p force-app/main/default/classes RunLocalTests
+workflows:
+    deploy-DuyHuynhDevOrg-workflow:
+     jobs:
+      - deploy-DuyHuynhDevOrg-job:
+          filters:
+            branches:
+              only: main
