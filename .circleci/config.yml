@@ -14,10 +14,10 @@ jobs:
       - sfdx/install
       - sfdx/auth:
           instanceUrl: https://login.salesforce.com/
-          defaultusername: $DEFAULT_USER_NAME
-          defaultdevhubusername: $DEFAULT_DEV_HUB_USERNAME
-          consumerKey: $CONSUMER_KEY
-          jwtKey: $JWT_KEY
+          defaultusername: DEFAULT_USER_NAME
+          defaultdevhubusername: DEFAULT_DEV_HUB_USERNAME
+          consumerKey: CONSUMER_KEY
+          jwtKey: JWT_KEY
       - run:
           name: Check Auth List
           command: sfdx force:auth:list
