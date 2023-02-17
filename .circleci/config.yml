@@ -21,7 +21,7 @@ jobs:
       defaultusername:
         default: duy.huynh@isobar.com
         description: Dev username
-        type: env_var_name
+        type: string
     steps:
       - checkout
       - sfdx/install
