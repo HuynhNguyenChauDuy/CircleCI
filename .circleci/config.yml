@@ -22,7 +22,7 @@ jobs:
           command: sfdx force:auth:list
       - run:
           name: Deploy
-          command: sfdx force:source:deploy -p force-app/main/default/classes -u duy.huynh@isobar.com
+          command: sfdx force:source:deploy -p force-app/main/default/classes/Main2.cls -u duy.huynh@isobar.com
           
   deploy-MichaelHuynhDevOrg-job:
     executor: sfdx/default
