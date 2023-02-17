@@ -9,26 +9,12 @@ jobs:
   # - Deploy
   deploy-DuyHuynhDevOrg-job:
     executor: sfdx/default
-    parameters:
-      jwtKey:
-        default: JWT_KEY
-        description: Dev JWT keys
-        type: env_var_name
-      consumerKey:
-        default: SCONSUMER_KEY
-        description: Dev comsumer key
-        type: env_var_name
-      defaultusername:
-        default: duy.huynh@isobar.com
-        description: Dev username
-        type: string
     steps:
       - checkout
       - sfdx/install
       - sfdx/auth:
           instanceUrl: https://login.salesforce.com/
           defaultusername: duy.huynh@isobar.com
-          defaultdevhubusername: DuyHuynhDevOrg
           consumerKey: CONSUMER_KEY
           jwtKey: JWT_KEY
       - run:
@@ -36,7 +22,7 @@ jobs:
           command: sfdx force:auth:list
       - run:
           name: Deploy
-          command: sfdx force:source:deploy -p force-app/main/default/classes
+          command: sfdx force:source:deploy -p force-app/main/default/classes -u duy.huynh@isobar.com
 workflows:
     version: 2
     deploy-DuyHuynhDevOrg-workflow:
