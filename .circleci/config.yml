@@ -9,6 +9,17 @@ jobs:
   # - Deploy
   deploy-DuyHuynhDevOrg-job:
     executor: sfdx/default
+    parameters:
+      jwtKey:
+        default: JWT_KEY
+        description: Dev JWT keys
+        type: env_var_name
+      consumerKey:
+        default: SCONSUMER_KEY
+        description: Dev comsumer key
+        type: env_var_name
+      defaultusername:
+        default: duy.huynh@isobar.com
     steps:
       - checkout
       - sfdx/install
