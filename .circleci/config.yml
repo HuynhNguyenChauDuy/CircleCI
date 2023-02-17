@@ -15,6 +15,7 @@ jobs:
       - sfdx/auth:
           instanceUrl: https://login.salesforce.com/
           defaultusername: duy.huynh@isobar.com
+          defaultdevhubusername: DuyHuynhDevOrg
           consumerKey: CONSUMER_KEY
           jwtKey: JWT_KEY
       - run:
