@@ -52,7 +52,7 @@ workflows:
               
     deploy-MichaelHuynhDevOrg-workflow:
      jobs:
-      - deploy-MichaelHuynh-job:
+      - deploy-MichaelHuynhDevOrg-job:
           filters:
             branches:
               only: feature/Dev1
