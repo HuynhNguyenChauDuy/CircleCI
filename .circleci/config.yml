@@ -23,6 +23,24 @@ jobs:
       - run:
           name: Deploy
           command: sfdx force:source:deploy -p force-app/main/default/classes -u duy.huynh@isobar.com
+          
+  deploy-MichaelHuynhDevOrg-job:
+    executor: sfdx/default
+    steps:
+      - checkout
+      - sfdx/install
+      - sfdx/auth:
+          instanceUrl: https://login.salesforce.com/
+          defaultusername: michael.huynh@circleci.com
+          consumerKey: CONSUMER_KEY_DEV_ORG
+          jwtKey: JWT_KEY_DEV_ORG
+      - run:
+          name: Check Auth List
+          command: sfdx force:auth:list
+      - run:
+          name: Deploy
+          command: sfdx force:source:deploy -p force-app/main/default/classes -u michael.huynh@circleci.com
+          
 workflows:
     version: 2
     deploy-DuyHuynhDevOrg-workflow:
@@ -31,3 +49,10 @@ workflows:
           filters:
             branches:
               only: main
+              
+    deploy-MichaelHuynhDevOrg-workflow:
+     jobs:
+      - deploy-MichaelHuynh-job:
+          filters:
+            branches:
+              only: feature/Dev1
