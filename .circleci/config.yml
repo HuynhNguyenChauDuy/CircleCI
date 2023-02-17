@@ -22,7 +22,7 @@ jobs:
           command: sfdx force:auth:list
       - run:
           name: Deploy
-          command: sfdx force:source:deploy -p force-app/main/default/classes RunLocalTests
+          command: sfdx force:source:deploy -p force-app/main/default/classes
 workflows:
     version: 2
     deploy-DuyHuynhDevOrg-workflow:
