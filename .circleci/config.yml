@@ -39,7 +39,7 @@ jobs:
           command: sfdx force:auth:list
       - run:
           name: Deploy
-          command: sfdx force:source:deploy -p force-app/main/default/classes -u michael.huynh@circleci.com
+          command: sfdx force:source:deploy -p force-app/main/default/classes/Dev1Branch.cls -u michael.huynh@circleci.com
           
 workflows:
     version: 2
