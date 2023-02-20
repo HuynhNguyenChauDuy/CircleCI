@@ -24,7 +24,6 @@ jobs:
           name: Deploy
           command: sfdx force:source:deploy -p force-app/main/default/classes -u duy.huynh@isobar.com
 workflows:
-    version: 2
     deploy-DuyHuynhDevOrg-workflow:
      jobs:
       - deploy-DuyHuynhDevOrg-job:
