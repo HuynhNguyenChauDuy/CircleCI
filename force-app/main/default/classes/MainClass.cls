@@ -20,13 +20,5 @@ public class MainClass {
         System.debug('Is Connected: ' + isConnected);
         System.assertEquals(true, isConnected);
         System.debug('Test Circle CI');
-
-        // Boolean isConnected = program.isConnected(1, 12);
-        // System.debug('Is Connected: ' + isConnected);
-        // System.assertEquals(true, isConnected);
-
-        // Boolean isConnected = program.isConnected(3, 12);
-        // System.debug('Is Connected: ' + isConnected);
-        // System.assertEquals(false, isConnected);
     }
 }
