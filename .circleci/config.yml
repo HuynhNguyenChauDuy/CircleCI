@@ -43,15 +43,15 @@ jobs:
           
 workflows:
     deploy-DuyHuynhDevOrg-workflow:
-    jobs:
-      - deploy-DuyHuynhDevOrg-job:
-          filters:
-            branches:
-              only: main
+      jobs:
+        - deploy-DuyHuynhDevOrg-job:
+            filters:
+              branches:
+                only: main
               
     deploy-DevelopmentOrg-workflow:
-    jobs:
-      - deploy-DevelopmentOrg-job:
-          filters:
-            branches:
-              only: feature/Dev1
+      jobs:
+        - deploy-DevelopmentOrg-job:
+            filters:
+              branches:
+                only: feature/Dev1
