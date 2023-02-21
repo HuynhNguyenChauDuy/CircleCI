@@ -31,7 +31,7 @@ jobs:
       - sfdx/install
       - sfdx/auth:
           instanceUrl: https://login.salesforce.com/
-          defaultusername: duy.huynh@isobar.com
+          defaultusername: michael.huynh@circleci.com
           consumerKey: CONSUMER_DEV_KEY
           jwtKey: JWT_DEV_KEY
       - run:
@@ -43,17 +43,15 @@ jobs:
           
 workflows:
     deploy-DuyHuynhDevOrg-workflow:
-     jobs:
-      - deploy-DuyHuynhDevOrg-job:
-          filters:
-            branches:
-              only: main
+      jobs:
+        - deploy-DuyHuynhDevOrg-job:
+            filters:
+              branches:
+                only: main
               
     deploy-DevelopmentOrg-workflow:
-     jobs:
-      - deploy-DevelopmentOrg-job:
-          filters:
-            branches:
-              only: feature/Dev1
-              
-            
+      jobs:
+        - deploy-DevelopmentOrg-job:
+            filters:
+              branches:
+                only: feature/Dev1
